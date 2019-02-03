@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './index.css';
+import Calculator from './components/calculator';
 
 class App extends Component {
   constructor(props) {
@@ -16,9 +17,10 @@ class App extends Component {
 
   render() {
     return (
- 
+      <Calculator />
+    )
 
-
+  }
 }
 
 export default App;
