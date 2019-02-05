@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Number, Zero} from './components/number'
+import { Number, Zero } from './components/number'
 import './index.css';
 
 class App extends Component {
@@ -14,22 +14,46 @@ class App extends Component {
     waitingForNewValue: false
   }
 
+  waitingValue = () => {
+    if (this.state.waitingForNewValue === true) {
+      this.setState({previousValue:this.state.displayValue}) 
+    }
+  }
+
+  updateState = (buttonValue) =>{
+    if(parseInt(buttonValue)){
+      if(this.state.waitingForNewValue === false){
+        this.setState({displayValue: buttonValue}, ()=>{
+          console.log(this.state)
+        })
+      }
+    }
+    
+  }
+
+
   render() {
     return (
       <body cz-shortcut-listen="true">
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root">
           <div className="calculator">
-          <div className="row">
-          <Number a='1' b='2' c='3'/>
-          <Number a='4' b='5' c='6'/>
-          <Number a='7' b='8' c='9'/>
-          <Zero a='0'/>
+            <div className="row">
+            {/* {
+              if(<waitingValue />){
+
+              }
+            } */}
+              <Number updateState={this.updateState} a='1' b='2' c='3' />
+              <Number updateState={this.updateState} a='4' b='5' c='6' />
+              <Number updateState={this.updateState} a='7' b='8' c='9' />
+
+              <Zero a='0' />
+            </div>
           </div>
-          </div>
-          </div>
-         
-          </body>
+        </div>
+
+      </body>
     )
   }
 
