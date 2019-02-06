@@ -13,4 +13,4 @@ const Calculator = (props)=>{
     )
 }
 
-export default Calculator
+export default Calculator;

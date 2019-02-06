@@ -47,11 +47,7 @@ class App extends Component {
 
               }
             } */}
-              <Number updateState={this.updateState} a='1' b='2' c='3' />
-              <Number updateState={this.updateState} a='4' b='5' c='6' />
-              <Number updateState={this.updateState} a='7' b='8' c='9' />
-
-              <Zero updateState={this.updateState} a='0' />
+              <Calculator updateState ={this.updateState}/>
             </div>
           </div>
         </div>
