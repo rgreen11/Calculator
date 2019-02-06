@@ -48,7 +48,7 @@ class App extends Component {
               <Number updateState={this.updateState} a='4' b='5' c='6' />
               <Number updateState={this.updateState} a='7' b='8' c='9' />
 
-              <Zero a='0' />
+              <Zero updateState={this.updateState} a='0' />
             </div>
           </div>
         </div>
