@@ -15,9 +15,9 @@ class App extends Component {
 
   }
   
-
   handleNumber = (buttonValue) => {
-    console.log(buttonValue)
+      this.state.displayValue = buttonValue;
+      
   }
 
   handleOperator = (buttonValue) =>{
@@ -33,9 +33,8 @@ class App extends Component {
   render() {
     return (
     <>
-    <Calculator changeState ={this.changeState}/>
-</>
-     
+    <Calculator handleNumber = {this.handleNumber} changeState ={this.changeState}/>
+    </>
     )
   }
 

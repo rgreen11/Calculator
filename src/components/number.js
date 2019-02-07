@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './calculator'
 
 const Number = (props) =>{
     if( props.a === '0'){
@@ -14,7 +14,6 @@ const Number = (props) =>{
           </>
     )
 }
-
 
 
 
