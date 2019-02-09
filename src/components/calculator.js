@@ -8,7 +8,7 @@ const Calculator = (props)=>{
         <>
         <div className="row">
                 <div className="col col-12 button black"><p style={{ textAlign: "right" }}>{props.display}</p></div>
-        </div> </>
+        </div>
 
         <div className='row'> 
             <Number changeState = {props.changeState} a='7' b='8' c='9'/>
