@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import './index.css';
 import Calculator from './components/calculator';
 
+import {stateChngAdd} from ‘./services/add’
+import {stateChngSub} from ‘./services/subtract’
+import {stateChngMult} from ‘./services/multiply’
+import {stateChngDiv} from ‘./services/divide’
+
 class App extends Component {
   constructor(props) {
     super(props)
