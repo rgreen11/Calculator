@@ -1,3 +1,17 @@
+.calculator{
+  width: 50%;
+  background-color: #333;
+  box-sizing: border-box;
+  display: block;
+}
+
+.inputview{
+  font-size: 5em;
+  color: #fff;
+  text-align: right;
+  background-color: #333;
+}
+
 .button {
     background-color: #E0E0E6;
     font-size: 40px;

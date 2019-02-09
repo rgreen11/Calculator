@@ -1,10 +1,10 @@
 import React from 'react';
-import './calculator'
+import './calculator';
+
+
 
 const Number = (props) =>{
-    if( props.a === '0'){
-        return <button onClick={(e) => props.changeState(e.currentTarget.value)} value = {props.a} className="button col-6">{props.a}</button> 
-    }
+    
 
     return (
           <>
@@ -15,6 +15,22 @@ const Number = (props) =>{
     )
 }
 
+const Zero = (props) =>{
+   
+        return <button onClick={(e) => props.handleNumber(e.currentTarget.value)} value = {props.a} className="button col-6">{props.a}</button> 
+    
+} 
+
+const Display = (props) => {
+   console.log('this is it',props.display)
+    return(
+        <div className='row'>
+        <div className="col-12 inputview">{props.display}
+        </div>
+        </div>
+    )
+   
+}
 
 
-export default Number;
+export {Number, Display, Zero};
